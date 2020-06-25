@@ -1,0 +1,38 @@
+class MatrixAdd
+{
+    //function to print 2 matrices
+    static void printMatrix(int m[][], int rs, int cs)
+    {
+    for(int i=0;i<rs;i++){
+        for (int j=0;j<cs;j++)
+        System.out.println(m[i][j] +" ");
+        System.out.println();
+    }
+    }
+    // Function to add two matrices
+    static int[][] add(int x[][],int y[][], int s)
+    {
+        int i,j;
+        int c[][]=new int[s][s];
+        for (i=0;i<s;i++)
+        for (j=0;j<s;j++)
+        c[i][j]=x[i][j]+y[i][j];
+        return c;
+    }
+public static void main(String a[])
+{   //print matrix a 
+    int s=2;
+    int x[][]={{3,3},{5,5}};
+    System.out.println("\nMatrix x:");
+    printMatrix(x,s,s);
+// print matrix y
+    int y[][]={{1,1},{2,2}};
+    System.out.println("\nMatrix y:");
+    printMatrix(y,s,s);
+// Add x & y
+    int c[][]=add(x,y,s);
+// print add
+   System.out.println("\nSum:");
+   printMatrix(c,s,s);
+}
+}   
