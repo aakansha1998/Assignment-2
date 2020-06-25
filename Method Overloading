@@ -1,0 +1,17 @@
+// Program to demonstrate method overloading
+class Number{
+    public static void sum(int a)
+    {
+        System.out.println(" " + a);
+    }
+    public static void sum(int x,int y)
+    {
+        System.out.println("Sum is:"+ (x+y));
+    }
+    public static void main(String[] arg)
+    {
+        Number n=new Number();
+        n.sum(5);
+        n.sum(2,3);
+    }
+    }
