@@ -1,0 +1,33 @@
+class Point
+{
+    private int x,y;
+    // function to show Default Contructor
+    public Point()
+    {
+        x=3;y=5;
+    }
+    // function to show Parametrized Contructor
+    public Point(int x,int y)
+    {
+        this.x=x; this.y=y;
+    }
+    // function to show Copy Contructor
+    public Point(Point c)
+    {
+        x=c.x; y=c.y;
+    }
+    public void display()
+    {
+        System.out.println("X="+x+"Y="+y);
+    }
+}
+class PDemo
+{
+    public static void main(String a[])
+    {
+        Point p1=new Point();
+        Point p2=new Point(2,3);
+        Point p3=new Point(p2);
+        p1.display();p2.display();p3.display();
+    }
+    }
