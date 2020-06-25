@@ -1,0 +1,55 @@
+class MatrixMulti{
+    //Function to print Matrix A
+    static void printMatrix(int A[][],int rowsize,int columnsize)
+    {
+    for(int i=0;i<rowsize;i++){
+       for(int j=0;j<columnsize;j++)
+       System.out.println(A[i][j] + " ");
+       System.out.println();
+    }
+    }
+    public static void print(int B[][],int rsize, int csize)
+    {
+     for(int i=0;i<rsize;i++){
+       for(int j=0;j<csize;j++)
+       System.out.println(B[i][j] + " ");
+       System.out.println();
+    }
+    }
+    // function to Multiply two matrices
+    static int[][] Multiply(int A[][],int B[][],int rowsize,int csize)
+    {
+    int sum=0;
+    int C[][] = new int[rowsize][csize]; 
+    for(int i=0;i<rowsize;i++){
+    for(int j=0;j<csize;j++){
+    for(int k=0;k<rowsize+1;k++){
+    sum=sum+(A[i][k]*B[k][j]);
+    }
+    C[i][j]=sum;
+    sum =0;
+    }
+    } 
+    return C;
+    }
+    // Main function
+    public static void main(String a[])
+{
+    int rowsize=2;int columnsize=3;
+    int A[][]={  {1,2,3},
+                 {4,5,6} 
+              };
+    System.out.println("\nMatrix A: ");
+    printMatrix(A,rowsize,columnsize);
+    int rsize=3;int csize=2;
+    int B [][]={ {7,8},
+                 {9,10},
+                 {11,12}
+                };
+    System.out.println("\nMatrix B: ");
+    print(B,rsize,csize);
+    int C[][] = Multiply(A, B, rowsize,csize);
+    System.out.println("\nResultant:");
+    printMatrix(C,rowsize,csize);
+}
+}
