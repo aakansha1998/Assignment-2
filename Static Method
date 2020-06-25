@@ -1,0 +1,17 @@
+// Program to demonstrate static method
+class Alphabet
+{
+    static void Letter(char A)
+    {
+        System.out.println("A");
+    }
+    static void show(String a)
+    {
+        System.out.println("String is:" + a);
+    }
+    public static void main(String[] arg)
+    {
+        Alphabet.Letter('A');
+        Alphabet.show("Aakansha");
+    }
+}
